@@ -32,19 +32,16 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-    /* Make table text smaller and more compact */
     [data-testid="stTable"] td, [data-testid="stTable"] th {
         font-size: 10px !important;
         padding: 4px 8px !important;
         line-height: 1.2 !important;
     }
 
-    /* Optional: Make the ticker column bold but keep it small */
     [data-testid="stTable"] td:first-child {
         font-weight: bold;
     }
     
-    /* Tighten sidebar */
     section[data-testid="stSidebar"] { min-width: 270px; max-width: 270px; }
     /* Metric card style */
     div[data-testid="metric-container"] {
@@ -53,7 +50,7 @@ st.markdown("""
         border-radius: 8px;
         padding: 12px;
     }
-    /* Section headers */
+    
     h3 { border-bottom: 2px solid #e9ecef; padding-bottom: 6px; }
 </style>
 """, unsafe_allow_html=True)
@@ -63,7 +60,7 @@ st.markdown("""
 # ─────────────────────────────────────────────────────────────────────────────
 
 with st.sidebar:
-    st.title("📊 ETF Dashboard")
+    st.title("ETF Dashboard")
     st.caption("Data sourced from Yahoo Finance via yFinance.")
     st.divider()
 
@@ -150,7 +147,7 @@ def _fmt(val, fmt=".3f"):
 # ─────────────────────────────────────────────────────────────────────────────
 
 def show_overview():
-    st.title("📊 ETF Analysis Dashboard — All Models")
+    st.title("ETF Analysis Dashboard — All Models")
     st.markdown(
         f"Analysing **{len(ETFS)} ETFs** against SPY as benchmark. "
         f"Risk-free rate: **{rf:.2%}** (from ^IRX).  "
